@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.Extensions.DependencyInjection;
+using TariffCompare.Service;
 
 namespace TariffCompare
 {
@@ -6,7 +8,16 @@ namespace TariffCompare
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // setup DI
+            var serviceProvider = new ServiceCollection()
+                .AddSingleton<ITariffService, TariffService>()
+                .BuildServiceProvider();
+
+            var tariffService = serviceProvider.GetService<ITariffService>();
+
+            tariffService.getProducts(2);
+
+            
         }
     }
 }

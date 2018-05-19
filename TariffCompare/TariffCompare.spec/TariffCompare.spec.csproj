@@ -16,10 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="My_feature1.cs">
+    <ProjectReference Include="..\TariffCompare\TariffCompare.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="TariffCompare.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="My_feature1.Steps.cs">
+    <Compile Update="TariffCompare.Steps.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

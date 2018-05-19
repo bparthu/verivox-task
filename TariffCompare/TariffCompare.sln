@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TariffCompare", "TariffCompare\TariffCompare.csproj", "{A0E92375-158D-464F-9B8A-1C96FC025DAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TariffCompare.spec", "TariffCompare.spec\TariffCompare.spec.csproj", "{87B4FD1E-83A5-446C-BCBC-477D77E33597}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TariffCompare.spec", "TariffCompare.spec\TariffCompare.spec.csproj", "{72E8E856-C2FC-43AB-8D80-A5BD74DEA2E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{A0E92375-158D-464F-9B8A-1C96FC025DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0E92375-158D-464F-9B8A-1C96FC025DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0E92375-158D-464F-9B8A-1C96FC025DAB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{87B4FD1E-83A5-446C-BCBC-477D77E33597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87B4FD1E-83A5-446C-BCBC-477D77E33597}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87B4FD1E-83A5-446C-BCBC-477D77E33597}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87B4FD1E-83A5-446C-BCBC-477D77E33597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E8E856-C2FC-43AB-8D80-A5BD74DEA2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E8E856-C2FC-43AB-8D80-A5BD74DEA2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E8E856-C2FC-43AB-8D80-A5BD74DEA2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E8E856-C2FC-43AB-8D80-A5BD74DEA2E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
