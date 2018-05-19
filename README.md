@@ -45,3 +45,8 @@ your choice.
 **Technical specification**
 1. language / runtime selected: C# / .NET
 2. Development model: Behaviour driven development
+
+# Docker image
+```
+docker run --rm -e CONSUMPTION=2000 bpaarthu/tariff-compare:latest
+```

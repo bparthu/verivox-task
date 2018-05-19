@@ -4,7 +4,7 @@ using LightBDD.Framework.Scenarios.Extended;
 using LightBDD.XUnit2;
 
 
-    [assembly: LightBddScope]
+    [assembly: ConfiguredLightBddScope]
     [Label("FEATURE_1")]
 	[FeatureDescription(
 @"Suggests products based on yearly energy consumption")]
