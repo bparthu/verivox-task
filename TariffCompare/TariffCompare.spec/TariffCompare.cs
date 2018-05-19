@@ -17,13 +17,16 @@ using LightBDD.XUnit2;
 			Runner.RunScenario(
                 Throws_argument_exception);
 		}
-
-		[Label("SCENARIO-2")]
-		[Scenario]
-		public void Should_throw_not_implemented_exception()
-		{
-			Runner.RunScenario(
-				Initialize_tariff_service,
-				Get_product_list);
-		}
 	}
+
+    public partial class Tariff_Compare
+    {
+        [Label("SCENARIO-2")]
+        [Scenario]
+        public void Should_throw_not_implemented_exception()
+        {
+            Runner.RunScenario(
+                Initialize_tariff_service,
+                Get_product_list);
+        }
+    }
