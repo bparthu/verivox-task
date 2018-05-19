@@ -4,6 +4,7 @@
 Develop a model to build up the following two products and to compare these products based on
 their annual costs. The comparison should accept the following input parameter:
 - Consumption (kWh/year)
+
 and create a list of these products with the columns
 - Tariff name
 - Annual costs (€/year)
@@ -38,3 +39,9 @@ If you write tests for your implementation please provide them with your impleme
 Please develop only the logic described above, and no UI (webpage, etc.). You do not need a data
 base. All sample data can be hardcoded or added to the implementation by any other method of
 your choice.
+
+# Thought process
+
+**Technical specification**
+1. language / runtime selected: C# / .NET
+2. Development model: Behaviour driven development
