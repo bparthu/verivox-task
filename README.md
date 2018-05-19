@@ -50,3 +50,6 @@ your choice.
 ```
 docker run --rm -e CONSUMPTION=2000 bpaarthu/tariff-compare:latest
 ```
+
+# BDD Test report URL
+[http://htmlpreview.github.io/?https://github.com/bparthu/verivox-task/blob/master/TariffCompare/TariffCompare.spec/Reports/FeaturesReport.html](http://htmlpreview.github.io/?https://github.com/bparthu/verivox-task/blob/master/TariffCompare/TariffCompare.spec/Reports/FeaturesReport.html).
