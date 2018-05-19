@@ -10,7 +10,15 @@ using LightBDD.XUnit2;
 @"Suggests products based on yearly energy consumption")]
 	public partial class Tariff_Compare
 	{
-		[Label("SCENARIO-1")]
+        [Label("SCENARIO-1")]
+		[Scenario]
+		public void Should_validate_command_line_arguments()
+		{
+			Runner.RunScenario(
+                Throws_argument_exception);
+		}
+
+		[Label("SCENARIO-2")]
 		[Scenario]
 		public void Should_throw_not_implemented_exception()
 		{

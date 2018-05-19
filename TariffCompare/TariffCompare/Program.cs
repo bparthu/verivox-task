@@ -4,10 +4,18 @@ using TariffCompare.Service;
 
 namespace TariffCompare
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            // validate if argument is sent
+            if(args.Length != 1)
+            {
+                throw new ArgumentException("CONSUMPTION argument is not passed");
+            }
+
+
+
             // setup DI
             var serviceProvider = new ServiceCollection()
                 .AddSingleton<ITariffService, TariffService>()
