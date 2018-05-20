@@ -23,7 +23,7 @@ public partial class Input_Validation : FeatureFixture
         Assert.Throws<NotSupportedException>(() => Program.Main(args));
     }
 
-    private void If_CONSUMPTION_argument_contains_invalid_number()
+    private void If_CONSUMPTION_argument_contains_invalid_input()
     {
         string[] args = new string[1];
         args[0] = "THIS_IS_NOT_A_NUMBER";
