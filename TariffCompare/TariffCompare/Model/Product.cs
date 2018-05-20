@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TariffCompare
 {
-    class Product
+    public abstract class ProductModel
     {
         public string Name { get; set; }
         public int AnnualUsage { get; set; }

@@ -20,10 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="TariffCompare.cs">
+    <Compile Update="InputValidation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="TariffCompare.Steps.cs">
+    <Compile Update="InputValidation.Steps.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

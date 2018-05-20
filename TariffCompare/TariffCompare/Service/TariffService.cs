@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TariffCompare.Domain;
 
 namespace TariffCompare.Service
 {
     public interface ITariffService
     {
-        int getProducts(int usage);
+        IEnumerable<IProduct> GetProducts(int usage);
     }
 
     public class TariffService : ITariffService
     {
-        public int getProducts(int usage)
+        public IEnumerable<IProduct> GetProducts(int usage)
         {
-            throw new NotImplementedException();
+            List<IProduct> products = new List<IProduct>();
+            products.Add(new ProductA());
+            products.Add(new ProductB());
+            return products;
         } 
     }
 }

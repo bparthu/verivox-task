@@ -30,16 +30,3 @@ public partial class Input_Validation : FeatureFixture
         Assert.Throws<NotSupportedException>(() => Program.Main(args));
     }
 }
-
-public partial class Input_Validation
-{
-    private void Initialize_tariff_service()
-    {
-        tariffService = new TariffService();
-    }
-
-    private void Get_product_list()
-    {
-        Assert.Throws<NotImplementedException>(() => tariffService.getProducts(1));
-    }
-}

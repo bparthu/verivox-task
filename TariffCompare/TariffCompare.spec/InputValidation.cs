@@ -26,5 +26,4 @@ public partial class Input_Validation
             If_CONSUMPTION_argument_contains_empty_string,
             If_CONSUMPTION_argument_contains_invalid_input);
     }
-
 }

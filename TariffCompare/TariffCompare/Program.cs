@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
+using TariffCompare.Domain;
 using TariffCompare.Service;
 
 namespace TariffCompare
@@ -29,8 +31,7 @@ namespace TariffCompare
 
             var tariffService = serviceProvider.GetService<ITariffService>();
 
-            tariffService.getProducts(2);
-
+            tariffService.GetProducts(consumption);
             
         }
     }
