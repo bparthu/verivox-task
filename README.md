@@ -40,11 +40,17 @@ Please develop only the logic described above, and no UI (webpage, etc.). You do
 base. All sample data can be hardcoded or added to the implementation by any other method of
 your choice.
 
-# Thought process
-
-**Technical specification**
-1. language / runtime selected: C# / .NET
-2. Development model: Behaviour driven development
+# Technical specification
+1. language / runtime selected: C# / .NET Core
+2. Development model: Behaviour driven development using LightBDD framework
+3. Design: 
+  - three layer architecture:
+    1. Model - Represents the data model class (eg, ProductModel).
+    2. Domain - Business logic goes here. Used interface pattern to create different implementation of IProduct interface (eg., ProductA and ProductB)
+    3. Service - This layer consumes domain layer, which makes it a better candidate for Dependency Injection.
+  - Used Dependency Injection to inject service class into Main method.
+  - BDD reports are added into repository, for easy access (see below section).
+  - Dockerized the solution, hence it can run anywhere (see below section).
 
 # Docker image
 ```
