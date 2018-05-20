@@ -29,4 +29,21 @@ public partial class Input_Validation : FeatureFixture
         args[0] = "THIS_IS_NOT_A_NUMBER";
         Assert.Throws<NotSupportedException>(() => Program.Main(args));
     }
+
+    private void If_CONSUMPTION_argument_contains_negative_number()
+    {
+        string[] args = new string[1];
+        args[0] = "-1";
+        Assert.Throws<NotSupportedException>(() => Program.Main(args));
+    }
+
+    private void If_CONSUMPTION_argument_contains_number_more_than_2147483647()
+    {
+        string[] args = new string[1];
+        args[0] = "2147483648";
+        Assert.Throws<NotSupportedException>(() => Program.Main(args));
+    }
+
+    
+
 }

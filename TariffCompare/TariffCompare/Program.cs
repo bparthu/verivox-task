@@ -17,9 +17,10 @@ namespace TariffCompare
             }
 
             int consumption = 0;
+            // int has the range of -2147483648 to 2147483647, which is more than enough for the input
             bool parsed = Int32.TryParse(args[0], out consumption);
 
-            if(!parsed)
+            if(!parsed || consumption < 0)
             {
                 throw new NotSupportedException("Please enter a valid number");
             }
@@ -31,7 +32,20 @@ namespace TariffCompare
 
             var tariffService = serviceProvider.GetService<ITariffService>();
 
-            tariffService.GetProducts(consumption);
+            Console.WriteLine("Below are our suggested products, sorted by annual tariff");
+            Console.WriteLine("---------------------------------------------------------");
+
+            using(IEnumerator<IProduct> productEnumerator = tariffService.GetProducts(consumption).GetEnumerator())
+            {
+                int i = 1;
+                while (productEnumerator.MoveNext())
+                {
+                    IProduct product = productEnumerator.Current;
+                    Console.WriteLine(i + ". " + product.Name + " : "+ product.AnnualTariff+" Euros");
+                    i++;
+                }
+            }
+
             
         }
     }

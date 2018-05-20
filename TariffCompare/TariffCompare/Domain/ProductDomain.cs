@@ -1,31 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TariffCompare.constants;
 
 namespace TariffCompare.Domain
 {
     public interface IProduct
     {
         // This allows us to have different implementation of products
-        int GetTariff(int consumption);
-        string GetName();
+        IProduct CalculateTariff(int consumption);
+        string Name { get; }
+        double AnnualTariff { get; }
     }
 
     public class ProductA : ProductModel, IProduct
     {
         public ProductA()
         {
-            Name = "Basic electricity tariff";
+            name = "Basic electricity tariff";
         }
 
-        public string GetName()
+        public string Name
         {
-            return Name;
+            get
+            {
+                return name;
+            }
         }
 
-        public int GetTariff(int consumption)
+        public double AnnualTariff
         {
-            throw new NotImplementedException();
+            get
+            {
+                return annualTariff;
+            }
+        }
+
+        public IProduct CalculateTariff(int consumption)
+        {
+            annualTariff = AppConstants.PRODUCT_A_BASE_TARIFF_PER_YEAR
+                + (consumption * AppConstants.PRODUCT_A_COST_PER_kWh);
+
+            return this;
         }
     }
 
@@ -33,17 +49,34 @@ namespace TariffCompare.Domain
     {
         public ProductB()
         {
-            Name = "Packaged tariff";
+            name = "Packaged tariff";
         }
 
-        public string GetName()
+        public string Name
         {
-            return Name;
+            get
+            {
+                return name;
+            }
         }
 
-        public int GetTariff(int consumption)
+        public double AnnualTariff
         {
-            throw new NotImplementedException();
+            get
+            {
+                return annualTariff;
+            }
+        }
+
+        public IProduct CalculateTariff(int consumption)
+        {
+            annualTariff = AppConstants.PRODUCT_B_BASE_TARIFF;
+            if(consumption > AppConstants.PRODUCT_B_FLAT_USAGE_POLICY)
+            {
+                annualTariff += (consumption - AppConstants.PRODUCT_B_FLAT_USAGE_POLICY) * AppConstants.PRODUCT_B_COST_PER_kWh;
+            }
+
+            return this;
         }
     }
 }

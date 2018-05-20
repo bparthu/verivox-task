@@ -24,6 +24,8 @@ public partial class Input_Validation
     {
         Runner.RunScenario(
             If_CONSUMPTION_argument_contains_empty_string,
-            If_CONSUMPTION_argument_contains_invalid_input);
+            If_CONSUMPTION_argument_contains_invalid_input,
+            If_CONSUMPTION_argument_contains_negative_number,
+            If_CONSUMPTION_argument_contains_number_more_than_2147483647);
     }
 }

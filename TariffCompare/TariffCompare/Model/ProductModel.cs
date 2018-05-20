@@ -6,7 +6,7 @@ namespace TariffCompare
 {
     public abstract class ProductModel
     {
-        public string Name { get; set; }
-        public int AnnualUsage { get; set; }
+        protected string name { get; set; }
+        protected double annualTariff { get; set; }
     }
 }

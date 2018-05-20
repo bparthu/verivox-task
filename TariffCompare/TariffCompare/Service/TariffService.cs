@@ -15,8 +15,12 @@ namespace TariffCompare.Service
         public IEnumerable<IProduct> GetProducts(int usage)
         {
             List<IProduct> products = new List<IProduct>();
-            products.Add(new ProductA());
-            products.Add(new ProductB());
+
+            products.Add(new ProductA().CalculateTariff(usage));
+            products.Add(new ProductB().CalculateTariff(usage));
+
+            products.Sort((x, y) => x.AnnualTariff.CompareTo(y.AnnualTariff));
+
             return products;
         } 
     }
